@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var billAmountField: UITextField!
     @IBOutlet weak var tipOutputLabel: UILabel!
@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tipOutputLabel.text = "$0.00"
         totalOutputLabel.text = "$0.00"
+        self.billAmountField.becomeFirstResponder()
+        
         
     }
     
