@@ -8,23 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
-
+class ViewController: UIViewController,UITextFieldDelegate {
+    
     @IBOutlet weak var billAmountField: UITextField!
     @IBOutlet weak var tipOutputLabel: UILabel!
     @IBOutlet weak var totalOutputLabel: UILabel!
     @IBOutlet weak var tipPctTabs: UISegmentedControl!
     
+    var poor = Double()
+    var average = Double()
+    var good = Double()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tipOutputLabel.text = "$0.00"
-        totalOutputLabel.text = "$0.00"
+        
+        poor = 0.1
+        average = 0.15
+        good = 0.2
+        
         self.billAmountField.becomeFirstResponder()
         
-        
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateTip() {
-        let tipPercentages = [0.18, 0.2, 0.22]
+        let tipPercentages = [poor, average, good]
         let tipPercentage = tipPercentages[tipPctTabs.selectedSegmentIndex]
         
         let moneyFormatString = "$%.2f"
@@ -68,6 +74,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Recalculate the tip
         updateTip()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destinationViewSettings : SettingsViewController = segue.destinationViewController as! SettingsViewController
+        
+        func doubleToTextNoDecimal(tip : Double) -> String {
+            var poorString:String = String(format: "%.0f", (round(tip * 100)))
+            return poorString
+        }
+        
+        destinationViewSettings.poorLabelText = "\(doubleToTextNoDecimal(poor))%"
+        
+        destinationViewSettings.avgLabelText = "\(doubleToTextNoDecimal(average))%"
+        
+        destinationViewSettings.goodLabelText = "\(doubleToTextNoDecimal(good))%"
+        
     }
 
 

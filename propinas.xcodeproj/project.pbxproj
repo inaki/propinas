@@ -14,7 +14,7 @@
 		8979D58E1B7D185900E08B51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8979D58D1B7D185900E08B51 /* Images.xcassets */; };
 		8979D5911B7D185900E08B51 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8979D58F1B7D185900E08B51 /* LaunchScreen.xib */; };
 		8979D59D1B7D185900E08B51 /* propinasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979D59C1B7D185900E08B51 /* propinasTests.swift */; };
-		8979D5A71B7D194000E08B51 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979D5A61B7D194000E08B51 /* TipCalculatorModel.swift */; };
+		899A67AF1B81201E00A9A413 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A67AE1B81201E00A9A413 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		8979D5961B7D185900E08B51 /* propinasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = propinasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8979D59B1B7D185900E08B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8979D59C1B7D185900E08B51 /* propinasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = propinasTests.swift; sourceTree = "<group>"; };
-		8979D5A61B7D194000E08B51 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
+		899A67AE1B81201E00A9A413 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 			children = (
 				8979D5831B7D185900E08B51 /* AppDelegate.swift */,
 				8979D5881B7D185900E08B51 /* ViewController.swift */,
+				899A67AE1B81201E00A9A413 /* SettingsViewController.swift */,
 				8979D58A1B7D185900E08B51 /* Main.storyboard */,
 				8979D58D1B7D185900E08B51 /* Images.xcassets */,
 				8979D58F1B7D185900E08B51 /* LaunchScreen.xib */,
 				8979D5851B7D185900E08B51 /* propinas.xcdatamodeld */,
 				8979D5811B7D185900E08B51 /* Supporting Files */,
-				8979D5A61B7D194000E08B51 /* TipCalculatorModel.swift */,
 			);
 			path = propinas;
 			sourceTree = "<group>";
@@ -167,6 +167,7 @@
 				TargetAttributes = {
 					8979D57D1B7D185900E08B51 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9E854K2BLB;
 					};
 					8979D5951B7D185900E08B51 = {
 						CreatedOnToolsVersion = 6.4;
@@ -220,8 +221,8 @@
 			files = (
 				8979D5891B7D185900E08B51 /* ViewController.swift in Sources */,
 				8979D5841B7D185900E08B51 /* AppDelegate.swift in Sources */,
+				899A67AF1B81201E00A9A413 /* SettingsViewController.swift in Sources */,
 				8979D5871B7D185900E08B51 /* propinas.xcdatamodeld in Sources */,
-				8979D5A71B7D194000E08B51 /* TipCalculatorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = propinas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = propinas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -419,6 +422,7 @@
 				8979D5A21B7D185900E08B51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8979D5A31B7D185900E08B51 /* Build configuration list for PBXNativeTarget "propinasTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +431,7 @@
 				8979D5A51B7D185900E08B51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
