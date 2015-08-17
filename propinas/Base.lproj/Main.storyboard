@@ -57,17 +57,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="baa-RM-0eA">
-                                        <rect key="frame" x="22" y="133" width="314" height="29"/>
-                                        <segments>
-                                            <segment title="poor"/>
-                                            <segment title="average"/>
-                                            <segment title="good"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pT7-UJ-Wdi"/>
-                                        </connections>
-                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -86,7 +75,6 @@
                     <connections>
                         <outlet property="billAmountField" destination="gDh-yf-Cz6" id="rpu-Hx-6Kk"/>
                         <outlet property="tipOutputLabel" destination="NWA-XU-JgZ" id="tQw-7u-YC4"/>
-                        <outlet property="tipPctTabs" destination="baa-RM-0eA" id="SSM-7i-GtA"/>
                         <outlet property="totalOutputLabel" destination="UvB-Bz-sQI" id="Q6f-Wg-k19"/>
                     </connections>
                 </viewController>
