@@ -45,7 +45,7 @@ class ViewController: UIViewController,UITextFieldDelegate, SettingsViewControll
         let tipPercentages = [poor, average, good]
         let tipPercentage = tipPercentages[tipPctTabs.selectedSegmentIndex]
         
-        let moneyFormatString = "$%.2f"
+        let moneyFormatString = "$ %.2f"
         
         let billAmount = (billAmountField.text as NSString).doubleValue
         let tip = billAmount * tipPercentage
